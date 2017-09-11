@@ -1,9 +1,11 @@
 <?php
 
-    function TimeAgo($time_ago) {
+  class time{
+
+    public function timeAgo($time_ago) {
         $time_ago =  strtotime($time_ago) ? strtotime($time_ago) : $time_ago;
         $time  = time() - $time_ago;
-        $time = ($time + 4*60*60)-30*60; // Play around with this line if time is forward or behind
+        $time = ($time + 4*60*60)-30*60;
 
         switch($time):
 
@@ -30,12 +32,20 @@
             // months
             case $time >= 2600640 && $time < 31207680;
             return (round($time/2600640) == 1) ? '1 month' : round($time/2600640).' months';
-            
+
             // years
             case $time >= 31207680;
-            return (round($time/31207680) == 1) ? '1 year' : round($time/31207680).' years' ;
+            return (round($time/31207680) == 1) ? '1 year' : round($time/31207680).' years';
 
         endswitch;
+
+      }
+
+    public function normalTime($time){
+      $str = strtotime($time);
+      return date("d-F-Y h:i:s a", $str);
     }
+
+  }
 
 ?>
