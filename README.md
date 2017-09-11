@@ -1,7 +1,9 @@
 # Handy-PHP-Timeago
 
-A very simple, handy & useful TimeAgo function. If you think time is forward or behind, then go `timeago.php` file & play around with line no `9` until you get the desired result!!
+A very simple, handy & useful TimeAgo function. If you think time is forward or behind, then go `timeago.php` file & play around with line no `6` until you get the desired result!!
 
 ```php
 TimeAgo(time:String):String
 ```
+
+Used widely in the [Instagram-clone](https://github.com/yTakkar/Instagram-Clone)!!
