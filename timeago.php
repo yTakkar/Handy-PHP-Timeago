@@ -3,8 +3,7 @@
     function TimeAgo($time_ago) {
         $time_ago =  strtotime($time_ago) ? strtotime($time_ago) : $time_ago;
         $time  = time() - $time_ago;
-        $time = $time + 4*60*60;
-        $time = $time - 30*60;    // Play around with this line if time is forward or behind.
+        $time = ($time + 4*60*60)-30*60; // Play around with this line if time is forward or behind
 
         switch($time):
 
